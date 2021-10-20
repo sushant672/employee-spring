@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head th:replace = "snippets.html :: name_header"></head>
+
+	<body>
+
+		<nav th:replace = "snippets.html :: name_navbar"></nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<form class="form-inline" id="employee-form">
+						<div class="form-group">
+							<label for="inputAge" class="col-sm-2 col-form-label">Age</label>
+							<div class="col-sm-10">
+							<input type="text" class="form-control" name="age" id="inputAge" placeholder="enter age">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="inputName" class="col-sm-2 col-form-label">Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="name" id="inputName" placeholder="enter name">
+							</div>
+						</div>
+
+						<button type="button" class="btn btn-primary" id="add-employee">Add</button>
+							&nbsp;
+						<button type="button" class="btn btn-primary" id="refresh-data">Refresh</button>
+					</form>
+				</div>
+			</div>  <!-- Row  end-->
+
+
+			<div class="row">
+				&nbsp;
+			</div>
+
+			<div class="row">
+
+				<div class="col-12">
+					<table class="table table-striped" id="employee-table">
+						<thead>
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col">Name</th>
+								<th scope="col">Age</th>
+								<th scope="col">Actions</th>
+							</tr>
+						</thead>
+						<tbody id = "table-body">
+							<tr>
+								<td>1</td>
+								<td>Romil Jain</td>
+								<td>30</td>
+								<td>Edit | Delete</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Rajul Jain</td>
+								<td>31</td>
+								<td>Edit | Delete</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Anaisha Jain</td>
+								<td>7</td>
+								<td>Edit | Delete</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+			<div th:replace = "snippets.html :: name_footer"></div>
+
+		</div> <!-- Container end-->
+
+
+	</body>
+
+</html>
